@@ -35,6 +35,7 @@ class TodoUITests: XCTestCase {
     }
     
     func test101() {
+        print(app.debugDescription)
         btnAdd.tap()
         btnTravel.tap()
         txtTodo.tap()

@@ -118,6 +118,9 @@
                                 <accessibility key="accessibilityConfiguration" identifier="txtTodo"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O7Z-E7-JHu" id="OBD-OC-24V"/>
+                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-W6-fbE">
                                 <rect key="frame" x="0.0" y="281" width="375" height="216"/>
