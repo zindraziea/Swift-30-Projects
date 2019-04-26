@@ -11,7 +11,7 @@ import XCTest
 class TodoUITests: XCTestCase {
     
     private lazy var app = XCUIApplication()
-    //Home
+    //Todo List
     private lazy var btnAdd:XCUIElement = app.buttons["+"]
     private lazy var btnEdit:XCUIElement = app.buttons["Edit"]
     private lazy var listTodo:XCUIElementQuery = app.tables.cells
@@ -48,4 +48,5 @@ class TodoUITests: XCTestCase {
         XCTAssertEqual(app.cells.element(boundBy: 4).staticTexts["titleLabel"].label, "test 101")
         XCTAssertEqual(app.cells.element(boundBy: 4).staticTexts["dateLabel"].label, "2020-06-01")
     }
+    
 }
