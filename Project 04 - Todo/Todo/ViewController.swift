@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     titleLabel.text = todo.title
     dateLabel.text = stringFromDate(todo.date)
     
+    imageView.accessibilityIdentifier = todo.image
     titleLabel.accessibilityIdentifier = "titleLabel"
     dateLabel.accessibilityIdentifier = "dateLabel"
   }

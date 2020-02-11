@@ -58,6 +58,15 @@ class CommonFunction: XCTestCase {
             return castValue
         }
     }
+    
+    func getLocalizeStr(strKey: String, tablename: String, targetLanguage: String) -> String {
+        let testLanguage = targetLanguage
+        if let path = Bundle(for: type(of: self)).path(forResource: testLanguage, ofType: "lproj"), let bundle = Bundle(path: path) {
+            let localString = NSLocalizedString(strKey, tableName: tablename, bundle: bundle, comment: "Null")
+            return localString
+        }
+        return ""
+    }
 
 }
 
@@ -68,9 +77,7 @@ extension XCUIElement {
             XCTFail("Tried to clear and enter text into a non string value")
             return
         }
-        
         self.tap()
-        
         let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.count)
         self.typeText(deleteString)
         self.typeText(text)

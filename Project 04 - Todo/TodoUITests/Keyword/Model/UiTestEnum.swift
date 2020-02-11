@@ -17,7 +17,7 @@ enum TodoType: String {
 
 enum Month: String {
     case January
-    case Febuary
+    case February
     case March
     case April
     case May
